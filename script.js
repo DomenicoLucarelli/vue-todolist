@@ -45,7 +45,11 @@ const { createApp } = Vue
         // funzione che pusha un oggetto nell'array
         pushInput(){
 
-            this.list.push(this.inputValue)
+            this.list.push(this.inputValue);
+            this.inputValue = {
+                text:'',
+                done: false,
+            }
 
         },
         //  funzione che toggla il valore di done 
