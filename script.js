@@ -42,7 +42,7 @@ const { createApp } = Vue
             this.list.splice(listIndex , 1)
         },
 
-        // funzione che pusha un oggetto nell'array
+        // funzione che pusha un oggetto nell'array e resetta il campo di input
         pushInput(){
 
             this.list.push(this.inputValue);
