@@ -19,7 +19,7 @@
 
             <div class="input-container">
 
-                <input v-model="inputValue.text" type="text" placeholder="inserisci qualcosa alla lista">
+                <input v-model="inputValue.text" type="text" placeholder="inserisci qualcosa alla lista" @keyup.enter="pushInput()">
     
                 <button @click="pushInput()" >Aggiungi</button>
 
