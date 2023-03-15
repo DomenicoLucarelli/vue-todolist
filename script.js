@@ -7,25 +7,47 @@ const { createApp } = Vue
         list: [
 
             {
-                text: 'guadagnare 5000 euro',
+                text: 'Guadagnare 5000 euro',
                 done: true
             },
 
             {
-                text: 'comprare un corso boolean',
+                text: 'Comprare un corso boolean',
                 done: true
             },
 
             {
-                text: 'frequentare il corso',
+                text: 'Frequentare il corso',
                 done: true
             },
 
             {
-                text: 'riguadagnare 5000 euro',
+                text: 'Riguadagnare 5000 euro',
                 done: false
             },
-        ]
+        ],
+
+        inputValue:{
+            text: '' ,
+            done: false,
+        },
       }
-    }
+    },
+
+    methods: {
+
+        //funxione che cancella elemento dall'array 
+        removeTodo(listIndex){
+            this.list.splice(listIndex , 1)
+        },
+
+        // funzione che pusha un oggetto nell'array
+        pushInput(){
+
+            this.list.push(this.inputValue)
+
+        },
+
+        
+    },
   }).mount('#app')

@@ -1,3 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 .cancelled{
     text-decoration: line-through;
+}
+
+strong{
+    cursor: pointer;
+}
+
+.container{
+    max-width: 500px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+li{
+    font-size: 21px;
+    
+
+}
+
+li strong{
+    font-weight: bold;
+}
+
+.input-container input{
+    height: 21px;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
+.input-container button{
+
+    padding: 3px 10px;
+    border-radius: 10px;
+    
 }

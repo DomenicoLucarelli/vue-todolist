@@ -15,13 +15,25 @@
 
     <div id="app">
 
-        <ul>
-            <li v-for="(listElement, index) in list" :class="listElement.done == true ? 'cancelled' : '' " >
+        <div class="container">
 
-                {{listElement.text}}
+            <div class="input-container">
 
-            </li>
-        </ul>
+                <input v-model="inputValue.text" type="text" placeholder="inserisci qualcosa alla lista">
+    
+                <button @click="pushInput()" >Aggiungi</button>
+
+            </div>
+
+            <ul>
+                <li v-for="(listElement, index) in list" :class="listElement.done == true ? 'cancelled' : '' " >
+    
+                    {{listElement.text}} <strong @click="removeTodo(index)">x</strong>
+    
+                </li>
+            </ul>
+            
+        </div>
 
     </div>
 
