@@ -28,7 +28,7 @@
             <ul>
                 <li v-for="(listElement, index) in list" :class="listElement.done == true ? 'cancelled' : '' " >
     
-                    {{listElement.text}} <strong @click="removeTodo(index)">x</strong>
+                 <span @click="changeDoneValue(index)">{{listElement.text }}</span> <strong @click="removeTodo(index)">x</strong>
     
                 </li>
             </ul>

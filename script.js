@@ -8,17 +8,17 @@ const { createApp } = Vue
 
             {
                 text: 'Guadagnare 5000 euro',
-                done: true
+                done: false
             },
 
             {
                 text: 'Comprare un corso boolean',
-                done: true
+                done: false
             },
 
             {
                 text: 'Frequentare il corso',
-                done: true
+                done: false
             },
 
             {
@@ -27,6 +27,7 @@ const { createApp } = Vue
             },
         ],
 
+        // variabile che mi permette di memorizzare l'input dell'utente
         inputValue:{
             text: '' ,
             done: false,
@@ -47,6 +48,14 @@ const { createApp } = Vue
             this.list.push(this.inputValue)
 
         },
+        //  funzione che toggla il valore di done 
+        changeDoneValue(index){
+            if(this.list[index].done == false){
+                this.list[index].done = true
+            }else{
+                this.list[index].done = false
+            }
+        }
 
         
     },
